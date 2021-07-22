@@ -280,3 +280,9 @@ tweaktime/media/
 .env
 .envs/*
 !.envs/.local/
+
+
+# compiled css
+*.css
+*.css.map
+
