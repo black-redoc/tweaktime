@@ -283,6 +283,6 @@ tweaktime/media/
 
 
 # compiled css
-*.css
-*.css.map
+tweaktime/static/css/project.css
+tweaktime/static/css/*.css.map
 
