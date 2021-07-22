@@ -1,118 +1,131 @@
-{% load static i18n %}<!DOCTYPE html>
+{% load static i18n %}
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}tweaktime{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="tweaktime is an app for manage your time considering your task">
-    <meta name="author" content="Sebastian Bocanegra">
 
-    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% block title %}tweaktime{% endblock title %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="tweaktime is an app for manage your time considering your task">
+  <meta name="author" content="Sebastian Bocanegra">
+
+  <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
 
-    {% block css %}
-   
+  {% block css %}
 
-    <!-- Your stuff: Third-party CSS libraries go here -->
-    <!-- This file stores project-specific CSS -->
-    <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    {% endblock %}
-    <!-- Le javascript
+
+  <!-- Your stuff: Third-party CSS libraries go here -->
+  <!-- This file stores project-specific CSS -->
+  <link href="{% static 'css/project.css' %}" rel="stylesheet">
+  {% endblock %}
+  <!-- Le javascript
     ================================================== -->
-    {# Placed at the top of the document so pages load faster with defer #}
-    {% block javascript %}
-      <!-- place project specific Javascript in this file -->
-      <script defer src="{% static 'js/bundle.js' %}"></script>
+  {# Placed at the top of the document so pages load faster with defer #}
+  {% block javascript %}
+  <!-- place project specific Javascript in this file -->
+  <script defer src="{% static 'js/bundle.js' %}"></script>
 
-    {% endblock javascript %}
+  {% endblock javascript %}
 
-  </head>
+</head>
 
-  <body>
+<body>
 
+  <div class="row __clean">
     <!-- Sidenavbar -->
-    <div class="row __clean">
-      <div class="col-3 __clean sidenavbar_container pr-3">
-     
-          <span>
-            <a href="#" class="pt-2 pl-2 text-light navbar-brand fs-1">TweakTime</a>
-          </span>
-          <div class="row">
-            <div class="col-3">
-              <ul class="navbar-nav me-auto ml-2 mt-4">
-                <li class="nav-item mt-4">
-                  <a href="#" class="nav-link text-light fs-4 d-inline-flex">
-                    <i class="icon ion-md-alarm mr-2"></i>Temporizador
-                  </a>
-                </li>
-                <li class="nav-item mt-4">
-                  <div class="dropdown">
-                    <button class="btn dropdown-toggle pl-0" type="button" id="dropdownTasks" data-bs-toggle="dropdown" aria-expanded="false">                      
-                      <a href="#" class="nav-link text-light fs-4 d-inline-flex">
-                        <i class="icon ion-md-create mr-2"></i>Tareas
-                      </a>
-                    </button>
-                    <ul class="dropdown-menu bg-dark pl-2 pr-2" aria-labelledby="dropdownTasks">
-                      <li class="nav-item">
-                        <a href="#" class="btn nav-link text-light fs-4 d-inline-flex">
-                          <i class="icon ion-md-list-box mr-2"></i>Pendientes
-                        </a>
-                      </li>
-                      <li class="nav-item mt-4">
-                        <a href="#" class="nav-link text-light fs-4 d-inline-flex">
-                          <i class="icon ion-md-checkmark mr-2"></i>Completadas
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item mt-4">
-                  <a href="#" class="nav-link text-light fs-4 d-inline-flex">
-                    <i class="icon ion-md-calendar mr-2"></i>Calendario
-                </a>
-                </li>
-                <li class="nav-item mt-4">
-                  <a href="#" class="nav-link text-light fs-4 d-inline-flex">
-                    <i class="icon ion-md-stats mr-2"></i>Estadísticas
-                  </a>
-                </li>
-              </ul>
-   
-            </div>
-          </div>
-          <div class="row float_end">
-            <div class="col">
-              <a href="#" class="button text-light fs-1 close_sidebar">
-                <i class="icon ion-md-backspace mr-2"></i>
+    <div class="col-3 __clean sidenavbar_container pr-3">
+
+      <span>
+        <a href="#" class="pt-2 pl-2 text-light navbar-brand fs-1 brand-collapse">TweakTime</a>
+      </span>
+      <div class="row">
+        <div class="col-3">
+          <ul class="navbar-nav me-auto ml-2 mt-4">
+            <li class="nav-item mt-4 ml-4">
+              <a href="#" class="nav-link text-light fs-4 d-inline-flex">
+                <i class="icon ion-md-alarm mr-2 non-collapse"></i>
+                <span class="collapsable">
+                  Temporizador
+                </span>
               </a>
-            </div>
-          </div>
-      </div>
+            </li>
+            <li class="nav-item mt-4 ml-4">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle pl-0" type="button" id="dropdownTasks" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <a href="#" class="nav-link text-light fs-4 d-inline-flex">
+                    <i class="icon ion-md-create mr-2 non-collapse"></i>
+                    <span class="collapsable">Tareas</span>
+                  </a>
+                </button>
+                <ul class="dropdown-menu bg-dark pl-2 pr-2" aria-labelledby="dropdownTasks">
+                  <li class="nav-item">
+                    <a href="#" class="btn nav-link text-light fs-4 d-inline-flex">
+                      <i class="icon ion-md-list-box mr-2"></i>
+                      <span>Pendientes</span>
+                    </a>
+                  </li>
+                  <li class="nav-item mt-4">
+                    <a href="#" class="nav-link text-light fs-4 d-inline-flex">
+                      <i class="icon ion-md-checkmark mr-2"></i>
+                      <span>Completadas</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item mt-4 ml-4">
+              <a href="#" class="nav-link text-light fs-4 d-inline-flex">
+                <i class="icon ion-md-calendar mr-2 non-collapse"></i>
+                <span class="collapsable">Calendario</span>
+              </a>
+            </li>
+            <li class="nav-item mt-4 ml-4">
+              <a href="#" class="nav-link text-light fs-4 d-inline-flex">
+                <i class="icon ion-md-stats mr-2 non-collapse"></i>
+                <span class="collapsable">Estadísticas</span>
+              </a>
+            </li>
+          </ul>
 
-      <div class="col">
-
-        <div class="container">
-  
-          {% if messages %}
-              {% for message in messages %}
-                  <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-              {% endfor %}
-          {% endif %}
-  
-          {% block content %}
-            <p>Use this document as a way to quick start any new project.</p>
-          {% endblock content %}
-  
-        </div> <!-- /container -->
-  
-        {% block modal %}{% endblock modal %}
+        </div>
       </div>
+      <div class="row float_end">
+        <div class="col">
+          <a href="#" class="button text-light fs-1 close_sidebar" id="collapse_navbar">
+            <i class="icon ion-md-backspace mr-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Sidenavbar -->
+    <div class="col">
+
+      <div class="container">
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}<button type="button"
+            class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+        {% endfor %}
+        {% endif %}
+
+        {% block content %}
+        <p>Use this document as a way to quick start any new project.</p>
+        {% endblock content %}
+
+      </div> <!-- /container -->
+
+      {% block modal %}{% endblock modal %}
+    </div>
 
 
     {% block inline_javascript %}
     {# Script tags with only code, no src (defer by default) #}
     {% endblock inline_javascript %}
-  </body>
+</body>
+
 </html>

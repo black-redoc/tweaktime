@@ -10762,6 +10762,7 @@ textarea.form-control-lg {
   height: 100vh;
   background-color: #6f42c1;
   position: relative;
+  transition: width 1s ease-in-out;
 }
 
 .__clean {
@@ -10789,10 +10790,32 @@ textarea.form-control-lg {
   padding-left: 0;
 }
 
+.ml-4 {
+  margin-left: 2rem;
+}
+
 .float_end {
   position: absolute;
   bottom: 0.5rem;
   right: 1.1rem;
+}
+
+.close_sidebar i:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.collapsable {
+  transition: display 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+.collapsed {
+  transform: translateX(-300%);
+  display: none;
+}
+
+.non-collapse {
+  transition: font-size 1s ease-in-out;
 }
 
 /*# sourceMappingURL=project.css.map */

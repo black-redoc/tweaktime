@@ -54,6 +54,7 @@ $red: #b94a48;
   height: 100vh;
   background-color: $purple;
   position: relative;
+  transition: width 1s ease-in-out;
 }
 
 .__clean {
@@ -82,6 +83,10 @@ $red: #b94a48;
   padding-left: 0;
 }
 
+.ml-4 {
+  margin-left: 2rem;
+}
+
 .float_end {
   position: absolute;
   bottom: 0.5rem;
@@ -89,7 +94,24 @@ $red: #b94a48;
 }
 
 .close_sidebar {
-  &:focus {
-    background-color: red;
+  i {
+    &:hover {
+      color: rgba(255, 255, 255, .5);
+    }
   }
 }
+
+.collapsable {
+  transition: display 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+.collapsed {
+  transform: translateX(-300%);
+  display: none;
+}
+
+.non-collapse {
+  transition: font-size 1s ease-in-out;
+}
+
