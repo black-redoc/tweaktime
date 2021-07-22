@@ -11,9 +11,7 @@ const collapse_navbar_callback = () => {
 		
 		if (brandCollapse.textContent === 'TweakTime') {
 			brandCollapse.textContent = 'TT';
-			console.log('here1')
 		} else {
-			console.log('here2')
 			brandCollapse.textContent = 'TweakTime';
 		}
 
