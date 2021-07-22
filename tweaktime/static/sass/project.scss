@@ -1,0 +1,89 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../../node_modules/bootstrap/scss/functions";
+
+// // 2. Include any default variable overrides here
+
+// // 3. Include remainder of required Bootstrap stylesheets
+// @import "../../../node_modules/bootstrap/scss/variables";
+// @import "../../../node_modules/bootstrap/scss/transitions";
+// @import "../../../node_modules/bootstrap/scss/mixins";
+
+// // 4. Include any optional Bootstrap components as you like
+// @import "../../../node_modules/bootstrap/scss/root";
+// @import "../../../node_modules/bootstrap/scss/reboot";
+// @import "../../../node_modules/bootstrap/scss/type";
+// @import "../../../node_modules/bootstrap/scss/images";
+// @import "../../../node_modules/bootstrap/scss/containers";
+// @import "../../../node_modules/bootstrap/scss/grid";
+
+
+
+// project specific CSS goes here
+
+
+// Alert colors
+
+$white: #fff;
+$mint-green: #d6e9c6;
+$black: #000;
+$pink: #f2dede;
+$dark-pink: #eed3d7;
+$red: #b94a48;
+
+////////////////////////////////
+		//Alerts//
+////////////////////////////////
+
+// bootstrap alert CSS, translated to the django-standard levels of
+// debug, info, success, warning, error
+
+.alert-debug {
+  background-color: $white;
+  border-color: $mint-green;
+  color: $black;
+}
+
+.alert-error {
+  background-color: $pink;
+  border-color: $dark-pink;
+  color: $red;
+}
+
+
+.sidenavbar_container {
+  height: 100vh;
+  background-color: $purple;
+  position: relative;
+}
+
+.__clean {
+  padding: 0;
+  margin: 0;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.float_end {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1.1rem;
+}

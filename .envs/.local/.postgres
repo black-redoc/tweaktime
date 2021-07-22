@@ -1,0 +1,8 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=127.0.0.1
+POSTGRES_PORT=5432
+POSTGRES_DB=tweaktime
+POSTGRES_USER=admin
+POSTGRES_PASSWORD=myp4ssword
+DATABASE_URL=admin:myp4ssword@localhost

@@ -1,0 +1,17 @@
+{
+  "name": "tweaktime",
+  "version": "0.1.0",
+  "description": "tweaktime is a framework for manage your time an task ",
+  "main": "tweaktime/static/js/project.js",
+  "scripts": {
+    "watch": "sass --watch ./tweaktime/static/sass/project.scss ./tweaktime/static/css/project.css"
+  },
+  "repository": "https://github.com/black-redoc/tweaktime.git",
+  "author": "black_redoc",
+  "license": "MIT",
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.2",
+    "sass": "^1.35.2"
+  }
+}
