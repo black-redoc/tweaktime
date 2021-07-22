@@ -87,3 +87,9 @@ $red: #b94a48;
   bottom: 0.5rem;
   right: 1.1rem;
 }
+
+.close_sidebar {
+  &:focus {
+    background-color: red;
+  }
+}
