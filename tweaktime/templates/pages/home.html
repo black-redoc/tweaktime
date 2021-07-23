@@ -1,11 +1,152 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="col">
-	<a href="#" class="d-block">aLink</a>
-	<a href="#" class="d-block">aLink1</a>
-	<a href="#" class="d-block">aLink2</a>
-	<a href="#" class="d-block">aLink3</a>
-	<a href="#" class="d-block">aLink4</a>
+<div class="row justify-content-between mt-5 offset-1 pr-3">
+
+	<div class="d-flex justify-content-between">
+		<h2>Tarea</h2>
+
+		<h2><span class="badge rounded-pill tag-primary colored-tag">Urgente</span></h2>
+	</div>
+
+	<div class="d-flex justify-content-between align-items-center mt-4 timer-contaier">
+		<a href="#">
+			<i class="icon ion-md-play-circle timer-play"></i>
+		</a>
+		<div class="time-line">
+			<div class="tag-circle-timer"></div>
+			<div class="baseline"></div>
+		</div>
+		<span class="timer-tag mr-3">0:00.00</span>
+	</div>
+
+	<div class="col timer-container pending-tasks mt-4">
+		<h3>Pendientes</h3>
+		<div class="container">
+
+			<div class="row">
+				<div class="col mt-3">
+	
+					<div class="d-flex justify-content-around align-items-center pending-item pending-item-active ">
+						<div class="col-xs">
+							<div class="circle-priority circle-danger"></div>
+						</div>
+	
+						<h3>TaskName</h3>
+	
+						<div class="container-sm">
+							<p class="lead text-wrap pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque commodi
+							</p>
+						</div>
+	
+						<h3>0:20.00</h3>
+					</div>
+	
+				</div>
+			</div>
+	
+			<div class="row">
+				<div class="col mt-4">
+	
+					<div class="d-flex justify-content-around align-items-center pending-item">
+						<div class="col-xs">
+							<div class="circle-priority circle-secondary"></div>
+						</div>
+	
+						<h3>TaskName</h3>
+						
+						<div class="container-sm">
+							<p class="lead text-wrap pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque commodi</p>
+						</div>
+	
+						<h3>0:20.00</h3>
+					</div>
+	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col mt-4">
+	
+					<div class="d-flex justify-content-around align-items-center pending-item">
+						<div class="col-xs">
+							<div class="circle-priority"></div>
+						</div>
+	
+						<h3>TaskName</h3>
+						
+						<div class="container-sm">
+							<p class="lead text-wrap pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque commodi</p>
+						</div>
+	
+						<h3>0:20.00</h3>
+					</div>
+	
+				</div>
+			</div>
+	
+			<div class="row">
+				<div class="col mt-4">
+	
+					<div class="d-flex justify-content-around align-items-center pending-item">
+						<div class="col-xs">
+							<div class="circle-priority"></div>
+						</div>
+	
+						<h3>TaskName</h3>
+						
+						<div class="container-sm">
+							<p class="lead text-wrap pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque commodi</p>
+						</div>
+	
+						<h3>0:20.00</h3>
+					</div>
+	
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col mt-4">
+	
+					<div class="d-flex justify-content-around align-items-center pending-item">
+						<div class="col-xs">
+							<div class="circle-priority"></div>
+						</div>
+	
+						<h3>TaskName</h3>
+						
+						<div class="container-sm">
+							<p class="lead text-wrap pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque commodi</p>
+						</div>
+	
+						<h3>0:20.00</h3>
+					</div>
+	
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col mt-4">
+	
+					<div class="d-flex justify-content-around align-items-center pending-item">
+						<div class="col-xs">
+							<div class="circle-priority"></div>
+						</div>
+	
+						<h3>TaskName</h3>
+						
+						<div class="container-sm">
+							<p class="lead text-wrap pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque commodi</p>
+						</div>
+	
+						<h3>0:20.00</h3>
+					</div>
+	
+				</div>
+			</div>
+
+		</div>
+		
+	</div>
 </div>
 {% endblock %}

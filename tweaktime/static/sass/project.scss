@@ -29,6 +29,8 @@ $black: #000;
 $pink: #f2dede;
 $dark-pink: #eed3d7;
 $red: #b94a48;
+$tag-primary: #FF007A;
+$tag-secondary: #62C6FF;
 
 ////////////////////////////////
 		//Alerts//
@@ -83,8 +85,16 @@ $red: #b94a48;
   padding-left: 0;
 }
 
+.pr-3 {
+  padding-right: 5rem;
+}
+
 .ml-4 {
   margin-left: 2rem;
+}
+
+.mr-3 {
+  margin-right: 2rem;
 }
 
 .float_end {
@@ -114,4 +124,108 @@ $red: #b94a48;
 .non-collapse {
   transition: font-size 1s ease-in-out;
 }
+
+
+// Colored Tags
+
+.colored-tag {
+  width: 12rem !important;
+}
+
+.tag-primary {
+  background-color: $tag-primary;
+  border: 1px $tag-primary solid;
+  color: #ffffff;
+}
+
+.timer-play {
+  font-size: 3.5rem;
+  margin-left: 1rem;
+  color: #000;
+}
+
+.tag-circle-timer {
+  border: .25rem solid #000;
+  border-radius: 25rem !important;
+  height: 40px;
+  width: 40px;
+}
+.baseline {
+  width: 25rem;
+  height: 5px;
+  background: rgb(236, 66, 66);
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  
+}
+
+.time-line {
+  margin-top: .5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.timer-tag {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.timer-container {
+  margin-top: 2rem;
+  border: 1px #c1c1c1 solid;
+  border-radius: 2rem;
+  padding: 15px;
+  overflow: none;
+
+  .container {
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 10px;
+      background-color: lighten(#000, 50%);
+      margin: 20px 2rem !important;
+      border-radius: 10rem;
+      height: 100px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10rem;
+      background-color: lighten(#000, .5%);
+    }
+
+    height: 55vh;
+  }
+}
+
+.circle-priority {
+  width: 50px;
+  height: 50px;
+  background-color: #c1c1c1;
+  border-radius: 25rem;
+  margin-right: 10px;
+}
+
+.circle-danger {
+  background-color: $tag-primary;
+}
+
+.circle-secondary{
+  background-color: $tag-secondary;
+}
+
+.pending-item {
+  background-color: rgba(0,0,0, .1);
+  height: 100px;
+  padding: 10px 10px;
+  border-radius: 8rem;
+}
+
+.pending-item-active {
+  background-color: #FFE4E4;
+}
+
+.pending-tasks {
+  height: 65vh;
+}
+
 
