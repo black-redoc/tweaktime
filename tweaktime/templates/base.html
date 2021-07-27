@@ -45,10 +45,10 @@
         <div class="col-3">
           <ul class="navbar-nav me-auto ml-2 mt-4">
             <li class="nav-item mt-4 ml-4">
-              <a href="#" class="nav-link text-light fs-4 d-inline-flex">
+              <a href="{% url 'tasks:timer' %}" class="nav-link text-light fs-4 d-inline-flex">
                 <i class="icon ion-md-alarm mr-2 non-collapse"></i>
                 <span class="collapsable">
-                  Temporizador
+                  Timer
                 </span>
               </a>
             </li>
@@ -58,20 +58,20 @@
                   aria-expanded="false">
                   <a href="#" class="nav-link text-light fs-4 d-inline-flex">
                     <i class="icon ion-md-create mr-2 non-collapse"></i>
-                    <span class="collapsable">Tareas</span>
+                    <span class="collapsable">Tasks</span>
                   </a>
                 </button>
                 <ul class="dropdown-menu bg-dark pl-2 pr-2" aria-labelledby="dropdownTasks">
                   <li class="nav-item">
-                    <a href="#" class="btn nav-link text-light fs-4 d-inline-flex">
+                    <a href="{% url 'tasks:undone' %}" class="btn nav-link text-light fs-4 d-inline-flex">
                       <i class="icon ion-md-list-box mr-2"></i>
-                      <span>Pendientes</span>
+                      <span>UnDone</span>
                     </a>
                   </li>
                   <li class="nav-item mt-4">
                     <a href="#" class="nav-link text-light fs-4 d-inline-flex">
                       <i class="icon ion-md-checkmark mr-2"></i>
-                      <span>Completadas</span>
+                      <span>Done</span>
                     </a>
                   </li>
                 </ul>
@@ -80,13 +80,13 @@
             <li class="nav-item mt-4 ml-4">
               <a href="#" class="nav-link text-light fs-4 d-inline-flex">
                 <i class="icon ion-md-calendar mr-2 non-collapse"></i>
-                <span class="collapsable">Calendario</span>
+                <span class="collapsable">Calendar</span>
               </a>
             </li>
             <li class="nav-item mt-4 ml-4">
               <a href="#" class="nav-link text-light fs-4 d-inline-flex">
                 <i class="icon ion-md-stats mr-2 non-collapse"></i>
-                <span class="collapsable">Estadísticas</span>
+                <span class="collapsable">Statistics</span>
               </a>
             </li>
           </ul>
