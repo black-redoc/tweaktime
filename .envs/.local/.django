@@ -12,7 +12,3 @@ REDIS_URL=redis://redis:6379/0
 # Flower
 CELERY_FLOWER_USER=OcQKdsANHQdmJRbVMctnMidcLCFHzuSz
 CELERY_FLOWER_PASSWORD=Wr5aAm1pkkpxiNHQBMVOkGMIvEmmkIiSIJBuh4OV9Qx53pjLD4YPjJeQ7DPbzqbh
-
-
-# Database
-DATABASE_URL=admin:myp4ssword@localhost
