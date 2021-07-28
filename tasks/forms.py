@@ -1,7 +1,7 @@
 from django import forms
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, ButtonHolder, Submit, Field, Div
-from crispy_forms.bootstrap import FormActions, InlineField
+from crispy_forms.layout import Layout, Submit, Field, Div
+from crispy_forms.bootstrap import FormActions
 
 from .models import Task
 from .task_priority import task_priority
@@ -39,6 +39,19 @@ class TaskForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = TaskFormHelper()
+
+    def save(self):
+        keys = (
+            "title",
+            "description",
+            "priority",
+            "status",
+        )
+        data = self.data.copy()
+        data = {key: data[key] for key in keys}
+        new_task = Task.objects.create(**data)
+
+        return new_task
 
 
 class TaskFormHelper(FormHelper):
